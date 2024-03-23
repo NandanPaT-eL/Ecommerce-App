@@ -171,11 +171,11 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="0dp"
+                android:layout_width="10dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:contentDescription="logo"
-                app:srcCompat="@drawable/citizen"
+                app:srcCompat="@drawable/logo"
                 tools:ignore="HardcodedText" />
         </LinearLayout>
 
@@ -203,7 +203,7 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:inputType="text"
-                    android:text="Copyright CITIZEN WATCH CO., LTD All rights reserved"
+                    android:text="Copyright STARLIGHT CO., LTD All rights reserved"
                     android:textAlignment="center"
                     android:textColor="#BCFFFFFF"
                     android:textSize="14sp"
