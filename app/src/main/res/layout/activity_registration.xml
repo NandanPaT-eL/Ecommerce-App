@@ -12,15 +12,16 @@
 
         <LinearLayout
             android:layout_width="0dp"
-            android:background="@drawable/signin_bar"
             android:layout_height="500dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:background="@drawable/signin_bar"
             android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+            tools:ignore="TextSizeCheck">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -105,7 +106,9 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView9"
-                    app:layout_constraintVertical_bias="0.041" />
+                    app:layout_constraintVertical_bias="0.041"
+                    tools:ignore="LabelFor,RtlHardcoded,RtlSymmetry,SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                    android:importantForAutofill="no" />
 
                 <Button
                     android:id="@+id/buttonin"
@@ -118,7 +121,8 @@
                     app:layout_constraintHorizontal_bias="0.49"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.756" />
+                    app:layout_constraintVertical_bias="0.756"
+                    tools:ignore="HardcodedText,TouchTargetSizeCheck" />
 
                 <TextView
                     android:id="@+id/textView11"
@@ -131,7 +135,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.823" />
+                    app:layout_constraintVertical_bias="0.823"
+                    tools:ignore="HardcodedText" />
 
                 <Button
                     android:id="@+id/buttonup"
@@ -144,7 +149,8 @@
                     app:layout_constraintHorizontal_bias="0.509"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.936" />
+                    app:layout_constraintVertical_bias="0.936"
+                    tools:ignore="HardcodedText,TouchTargetSizeCheck" />
 
                 <TextView
                     android:id="@+id/textView"
@@ -158,7 +164,8 @@
                     app:layout_constraintHorizontal_bias="0.158"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.168" />
+                    app:layout_constraintVertical_bias="0.168"
+                    tools:ignore="HardcodedText" />
 
                 <EditText
                     android:id="@+id/editTextText"
@@ -175,7 +182,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.243" />
+                    app:layout_constraintVertical_bias="0.243"
+                    tools:ignore="Autofill,LabelFor,RtlHardcoded,RtlSymmetry,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
