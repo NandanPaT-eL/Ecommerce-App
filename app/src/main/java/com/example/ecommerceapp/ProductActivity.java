@@ -3,8 +3,10 @@ package com.example.ecommerceapp;
 import static android.app.PendingIntent.getActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -34,7 +36,9 @@ public class ProductActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     ArrayList<ProductObject> productObjects;
     ProductAdapter productAdapter;
+    ImageView imageView;
     FirebaseFirestore db;
+    FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +51,8 @@ public class ProductActivity extends AppCompatActivity {
         productObjects = new ArrayList<>();
         productAdapter = new ProductAdapter(this, productObjects);
         recyclerView.setAdapter(productAdapter);
+        imageView = findViewById(R.id.imageView3);
+
 
         db.collection("ProductList")
                 .get()
@@ -66,5 +72,13 @@ public class ProductActivity extends AppCompatActivity {
                         }
                     }
                 });
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                auth.signOut();
+                startActivity(new Intent(ProductActivity.this, MainActivity.class));
+                finish();
+            }
+        });
     }
 }

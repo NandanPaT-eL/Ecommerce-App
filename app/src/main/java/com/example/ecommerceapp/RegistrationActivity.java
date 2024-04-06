@@ -23,7 +23,7 @@ public class RegistrationActivity extends AppCompatActivity {
     EditText name;
     EditText email;
     EditText password;
-    private FirebaseAuth auth;
+    FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

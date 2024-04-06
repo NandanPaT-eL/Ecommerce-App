@@ -26,36 +26,28 @@
 
             <ImageView
                 android:id="@+id/imageView2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:contentDescription="@string/todo"
                 app:srcCompat="@drawable/logo" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-            app:layout_constraintVertical_bias="0.0">
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="39dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="1"
-                android:fontFamily="sans-serif-black"
-                android:gravity="center_vertical"
-                android:text=" Starlight's Skincare Range"
-                android:textColor="@color/black"
-                android:textSize="24sp" />
+                app:srcCompat="@drawable/log_out" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/baseline_add_shopping_cart_24" />
+
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
@@ -65,7 +57,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
