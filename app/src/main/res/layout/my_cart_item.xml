@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="5dp"
+    android:elevation="4dp"
+    android:layout_margin="5dp">
+
+    <LinearLayout
+        android:padding="7dp"
+        android:backgroundTint="#C9CACE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Product Name: "
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="name "
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="16sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Product Price: "
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="price "
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="16sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Purchase Date: "
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/product_date"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="date "
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="16sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Purchase Time: "
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/product_time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="time"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="16sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Product Quantity: "
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/product_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="quantity "
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="16sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Total Price: "
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/product_total"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="total "
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

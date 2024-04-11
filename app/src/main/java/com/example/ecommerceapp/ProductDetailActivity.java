@@ -74,7 +74,7 @@ public class ProductDetailActivity extends AppCompatActivity {
                     quantity.setText(String.valueOf(totalQuantity));
 
                     if(productObject != null) {
-                        totalPrice = productObject.getPrice() * totalQuantity;
+                        totalPrice = (productObject.getPrice() * totalQuantity);
                     }
                 }
             }
@@ -87,7 +87,7 @@ public class ProductDetailActivity extends AppCompatActivity {
                     quantity.setText(String.valueOf(totalQuantity));
 
                     if(productObject != null) {
-                        totalPrice = productObject.getPrice() * totalQuantity;
+                        totalPrice = (productObject.getPrice() * totalQuantity);
                     }
                 }
             }

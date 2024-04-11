@@ -1,6 +1,5 @@
 package com.example.ecommerceapp;
 
-import static android.app.PendingIntent.getActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -18,18 +17,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 
 public class ProductActivity extends AppCompatActivity {
@@ -37,6 +31,7 @@ public class ProductActivity extends AppCompatActivity {
     ArrayList<ProductObject> productObjects;
     ProductAdapter productAdapter;
     ImageView imageView;
+    ImageView imageView1;
     FirebaseFirestore db;
     FirebaseAuth auth;
     @Override
@@ -52,7 +47,7 @@ public class ProductActivity extends AppCompatActivity {
         productAdapter = new ProductAdapter(this, productObjects);
         recyclerView.setAdapter(productAdapter);
         imageView = findViewById(R.id.imageView3);
-
+        imageView1 = findViewById(R.id.imageView4);
 
         db.collection("ProductList")
                 .get()
@@ -72,6 +67,12 @@ public class ProductActivity extends AppCompatActivity {
                         }
                     }
                 });
+        imageView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ProductActivity.this, CartActivity.class));
+            }
+        });
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
