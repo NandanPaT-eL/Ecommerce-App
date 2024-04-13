@@ -28,7 +28,7 @@ import java.util.Objects;
 
 
 public class CartActivity extends AppCompatActivity {
-    float totalBill = 0.2f;
+    int totalBill = 0;
     TextView totalBillAmt;
     RecyclerView recyclerView;
     ArrayList<Cartmodel> cartmodels;
@@ -37,9 +37,11 @@ public class CartActivity extends AppCompatActivity {
     FirebaseAuth auth;
     FirebaseFirestore firestore;
     Button checkout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        final Object object = getIntent().getSerializableExtra("detailed");
 
         setContentView(R.layout.activity_cart);
 
@@ -55,10 +57,12 @@ public class CartActivity extends AppCompatActivity {
         cartAdapter = new CartAdapter(this, cartmodels);
         recyclerView.setAdapter(cartAdapter);
 
+
         checkout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(CartActivity.this, CheckoutActivity.class);
+                intent.putExtra("Amount", totalBill);
                 startActivity(intent);
             }
         });

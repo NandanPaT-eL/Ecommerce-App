@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -17,6 +18,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.StorageTask;
 
+import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,7 +26,7 @@ import java.util.Map;
 public class CheckoutActivity extends AppCompatActivity {
     FirebaseFirestore firestore;
     FirebaseAuth auth;
-
+    TextView subtotal, tax, finalPrice;
     EditText firstName, lastName, address, email, number;
     Button confirm;
     RadioButton credit, debit, razor;
@@ -33,6 +35,9 @@ public class CheckoutActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkout);
+
+        double amount = 0.0;
+        amount = getIntent().getIntExtra("Amount", 0);
 
         firestore = FirebaseFirestore.getInstance();
         auth = FirebaseAuth.getInstance();
@@ -48,6 +53,11 @@ public class CheckoutActivity extends AppCompatActivity {
         debit = findViewById(R.id.debit);
         razor = findViewById(R.id.razorpay);
 
+        subtotal = findViewById(R.id.subTotal);
+        tax = findViewById(R.id.tax);
+        finalPrice = findViewById(R.id.total);
+        subtotal.setText("$ "+ amount);
+        finalPrice.setText(String.format("$ %.2f", amount*1.18));
 
         confirm.setOnClickListener(new View.OnClickListener() {
             @Override
