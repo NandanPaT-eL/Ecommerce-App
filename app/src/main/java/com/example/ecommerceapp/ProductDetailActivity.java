@@ -1,5 +1,7 @@
 package com.example.ecommerceapp;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,8 +19,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import org.w3c.dom.Text;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
@@ -28,8 +28,10 @@ public class ProductDetailActivity extends AppCompatActivity {
     FirebaseAuth auth;
     ProductObject productObject = null;
     TextView name, price, quantity;
+    Button cart;
     int totalQuantity = 1;
     int totalPrice = 0;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,8 +50,8 @@ public class ProductDetailActivity extends AppCompatActivity {
         quantity = findViewById(R.id.quantity);
         name = findViewById(R.id.detailedName);
         price = findViewById(R.id.price);
+        cart = findViewById(R.id.buynow);
         Button addCart = findViewById(R.id.cartbutton);
-        Button buynow = findViewById(R.id.addbutton);
         ImageView addItem = findViewById(R.id.addItem);
         ImageView removeItem = findViewById(R.id.removeItem);
 
@@ -90,6 +92,13 @@ public class ProductDetailActivity extends AppCompatActivity {
                         totalPrice = (productObject.getPrice() * totalQuantity);
                     }
                 }
+            }
+        });
+        cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProductDetailActivity.this, CartActivity.class);
+                startActivity(intent);
             }
         });
         button1.setOnClickListener(new View.OnClickListener() {

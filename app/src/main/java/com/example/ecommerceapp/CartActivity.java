@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -34,6 +36,7 @@ public class CartActivity extends AppCompatActivity {
 
     FirebaseAuth auth;
     FirebaseFirestore firestore;
+    Button checkout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,12 +48,20 @@ public class CartActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.cart_rec);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
+        checkout = findViewById(R.id.button);
         totalBillAmt = findViewById(R.id.textView3);
 
         cartmodels = new ArrayList<>();
         cartAdapter = new CartAdapter(this, cartmodels);
         recyclerView.setAdapter(cartAdapter);
+
+        checkout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CartActivity.this, CheckoutActivity.class);
+                startActivity(intent);
+            }
+        });
 
         LocalBroadcastManager.getInstance(this)
                         .registerReceiver(mMessageReceiver, new IntentFilter("MyTotalAmount"));
