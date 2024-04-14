@@ -73,26 +73,7 @@
                 android:fontFamily="sans-serif-condensed"
                 android:textSize="16sp"/>
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Purchase Time: "
-                android:textColor="@color/black"
-                android:fontFamily="sans-serif-condensed"
-                android:textSize="16sp"/>
-            <TextView
-                android:id="@+id/product_time"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="time"
-                android:textColor="@color/black"
-                android:fontFamily="sans-serif-condensed"
-                android:textSize="16sp"/>
-        </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -104,6 +85,12 @@
                 android:textColor="@color/black"
                 android:fontFamily="sans-serif-condensed"
                 android:textSize="16sp"/>
+            <ImageView
+                android:id="@+id/minus"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/minussign"
+                android:layout_gravity="center_vertical"/>
             <TextView
                 android:id="@+id/product_quantity"
                 android:layout_width="wrap_content"
@@ -112,6 +99,13 @@
                 android:textColor="@color/black"
                 android:fontFamily="sans-serif-condensed"
                 android:textSize="16sp"/>
+            <ImageView
+                android:id="@+id/plus"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/plussign"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -133,5 +127,17 @@
                 android:fontFamily="sans-serif-condensed"
                 android:textSize="16sp"/>
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+            <ImageView
+                android:id="@+id/bin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bin"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>

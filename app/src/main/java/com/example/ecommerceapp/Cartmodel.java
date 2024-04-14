@@ -7,6 +7,7 @@ public class Cartmodel {
     String productTime;
     int totalPrice;
     String totalQuantity;
+    String documentId;
 
     public Cartmodel() {
     }
@@ -18,6 +19,38 @@ public class Cartmodel {
         this.productTime = productTime;
         this.totalPrice = totalPrice;
         this.totalQuantity = totalQuantity;
+    }
+
+    public void setTotalQuantity(String totalQuantity) {
+        this.totalQuantity = totalQuantity;
+    }
+
+    public String getDocumentId() {
+        return documentId;
+    }
+
+    public void setDocumentId(String documentId) {
+        this.documentId = documentId;
+    }
+
+    public void setProductDate(String productDate) {
+        this.productDate = productDate;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public void setProductPrice(String productPrice) {
+        this.productPrice = productPrice;
+    }
+
+    public void setProductTime(String productTime) {
+        this.productTime = productTime;
+    }
+
+    public void setTotalPrice(int totalPrice) {
+        this.totalPrice = totalPrice;
     }
 
     public String getProductDate() { return productDate; }
