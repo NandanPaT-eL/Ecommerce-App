@@ -140,7 +140,7 @@ public class CheckoutActivity extends AppCompatActivity implements PaymentResult
             options.put("image", "https://s3.amazonaws.com/rzp-mobile/images/rzp.jpg");
             //options.put("order_id", "order_DBJOWzybf0sJbb");//from response of step 3.
             options.put("theme.color", "#3399cc");
-            options.put("currency", "INR");
+            options.put("currency", "USD");
             amount = amount*100*1.18;
             options.put("amount", amount+"");
             options.put("prefill.email", "nandanpatel@gmail.com");
